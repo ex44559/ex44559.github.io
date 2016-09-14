@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "修改database schema为Open vSwitch添加新功能的步骤"
+title: "修改database schema为Open vSwitch添加新功能"
 comments: true
 description: "Open vSwitch优化"
 keywords: "Open vSwitch"
