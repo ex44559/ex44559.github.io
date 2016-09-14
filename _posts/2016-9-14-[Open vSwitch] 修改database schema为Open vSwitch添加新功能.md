@@ -23,7 +23,7 @@ Open vSwitch的schema指的就是vswitchd/vswitch.ovsschema，这个文件使用
        "lacp": {
          "type": {"key": {"type": "string",
            "enum": ["set", ["active", "passive", "off"]]},
-         "min": 0, "max": 1}},
+         "min": 0, "max": 1}}
 ```
 
 当想要添加新功能时，按照JSON语法将新功能的配置项添加到vswitchd/vswitch.ovsschema文件中即可。
