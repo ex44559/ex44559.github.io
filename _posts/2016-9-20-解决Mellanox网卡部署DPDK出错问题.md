@@ -16,13 +16,11 @@ DPDK由Intel开发，在用户态处理数据包，采用轮询方式取代传�
 具体流程可以参见DPDK的[文档](http://dpdk.org/doc/guides/linux_gsg/build_dpdk.html)。
 
 ##开启DPDK的Mellanox Driver
-
 DPDK的配置文件保存在config/目录中，配置项很多，需要根据自身的环境应用合适的配置文件。一般的服务器环境都是x86_64架构，所以通常的选择是config_x86_64-native-linuxapp-gcc。
 
 在config/common_base文件中，寻找到CONFIG_RTE_LIBRTE_MLX4_PMD字段（如果使用mlx5驱动，应当使用包含MLX5的字段），并将其由n改为y，即可支持Mellanox的网卡。依照DPDK的文档安装流程开始编译。
 
 ##解决DPDK编译时报错
-
 在CentOS 7.2环境下，修改完config中的设置后，编译mlx4模块时会出现error。
 
 ```bash
