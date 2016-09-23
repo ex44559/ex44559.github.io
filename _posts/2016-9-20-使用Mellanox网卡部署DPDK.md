@@ -36,11 +36,13 @@ error:
 根据我的实践，直接选择最新版本的镜像文件，不用考虑固件版本匹配的问题，因为OFED软件包中包含了固件升级器，可以自动将固件升级到更高版本。
 
 采用下列下载iso镜像
+
 ```bash
 wget http://www.mellanox.com/downloads/ofed/MLNX_OFED-3.3-1.0.4.0/MLNX_OFED_LINUX-3.3-1.0.4.0-rhel7.2-x86_64.iso
 ```
 
 将其挂载并安装
+
 ```bash
 mount -o ro,loop MLNX_OFED_LINUX-3.3-1.0.4.0-rhel7.2-x86_64.iso /mnt
 
@@ -50,32 +52,38 @@ mount -o ro,loop MLNX_OFED_LINUX-3.3-1.0.4.0-rhel7.2-x86_64.iso /mnt
 安装完成后，需要重新启动。
 
 重新启动后，加载相应的内核模块：
+
 ```bash
 modprobe -a ib_uverbs mlx4_en mlx4_core mlx4_ib
 ```
 
 检查是否可以连接到kernel verbs：
+
 ```bash
 ls -d /sys/class/net/*/device/infiniband_verbs/uverbs* | cut -d / -f 5
 ```
 
 典型的输出为：
+
 ```bash
 ens5d1
 ens5
 ```
 
 挂载huge page：
+
 ```bash
 mount -t hugetlbfs nodev /mnt/huge
 ```
 
 再运行testpmd，确认Poll Mode Driver可用：
+
 ```bash
 testpmd -c 0xff00 -n 4 -w 0000:8b:00.0 -- --rxq=2 --txq=2 -i
 ```
 
 正常的输出为：
+
 ```bash
 [...]
 EAL: PCI device 0000:83:00.0 on NUMA socket 1
