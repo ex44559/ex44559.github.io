@@ -128,6 +128,7 @@ set 0 size 64
 ```
 
 设置数据包的标准格式为：
+
 ```bash
 set <portlist> <xxx> value         - Set a few port values
   <portlist>                       - a list of ports as 2,4,6-9,12 or the word 'all'
@@ -150,6 +151,7 @@ str
 由于Pktgen-DPDK提供了交互式的命令行，如果不保存设置的话，重新测试时需要再次设置源端和目标端IP，非常繁琐。可以使用save和load保存设置。
 
 用法：
+
 ```bash
 save <path-to-file>                - Save a configuration file using the filename
 load <path-to-file>                - Load a command/script file from the given path
@@ -164,6 +166,7 @@ Pktgen-DPDK支持lua脚本，可以用lua脚本定义测试行为。
 ## 测试效果
 
 在双端口40Gbps Mellanox网卡的环境下，初步测试的结果为：
+
 ![结果](http://ww2.sinaimg.cn/mw1024/6a964b69jw1f8afiy2txcj21kw17jgp4.jpg)
 
 ## 测试分析
