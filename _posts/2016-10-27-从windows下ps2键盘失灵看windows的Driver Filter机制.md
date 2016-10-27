@@ -35,6 +35,4 @@ keywords: "Open vSwitch DPDK"
 
 这种在两个可用驱动中设置选择策略的组件，就是Driver Filter。正如注册表中的名字所示，令上层组件选择kbdclass驱动键盘，而不是i8042prt。
 
-Driver Filter机制在科研中的体现，就是这篇FAST'16的文章，基于Windows的Driver Filter特性为不同的I/O选择各自的路径。
-
-由于文章中没有给出实现方法，我大胆推测可能就是设置了不同的注册表键值来控制各种I/O使用的路径。
+Driver Filter机制在科研中的体现，就是这篇FAST'16的文章(sRoute: Treating the Storage Stack Like a Network)，基于Windows的Driver Filter特性为不同的I/O选择各自的路径。由于文章中没有给出实现方法，我大胆推测可能就是设置了不同的注册表键值来控制各种I/O使用的路径。:)
