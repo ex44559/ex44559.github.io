@@ -6,7 +6,7 @@ description: "Open vSwitch"
 keywords: "Open vSwitch DPDK"
 ---
 
-在部署OVS-DPDK的过程中，出现"ovs|00014|timeval|WARN|Unreasonably long 6567ms poll interval (232msuser, 5958ms system)"错误提示。于是我在OVS的Mail List中讨论了这个问题。通过进一步配置，我发现是内存分配的问题。
+在部署OVS-DPDK的过程中，出现```"ovs|00014|timeval|WARN|Unreasonably long 6567ms poll interval (232msuser, 5958ms system)"```错误提示。于是我在OVS的Mail List中讨论了这个问题。通过进一步配置，我发现是内存分配的问题。
 
 这次讨论的链接：http://openvswitch.org/pipermail/discuss/2016-October/023026.html
 
