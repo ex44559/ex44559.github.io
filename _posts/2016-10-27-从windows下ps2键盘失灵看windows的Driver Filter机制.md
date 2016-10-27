@@ -23,11 +23,11 @@ keywords: "Open vSwitch DPDK"
 
 根据Windows设备管理器显示的PS/2设备驱动界面，看到可用的驱动有两个。如下图所示。
 
-!()[http://ww2.sinaimg.cn/mw1024/6a964b69jw1f9713pt81wj20bc0fu0sw.jpg]
+![](http://ww2.sinaimg.cn/mw1024/6a964b69jw1f9713pt81wj20bc0fu0sw.jpg)
 
 故障时，事件信息如下图所示。
 
-!()[http://ww4.sinaimg.cn/mw1024/6a964b69jw1f97155cjt6j20bu03pglm.jpg]
+![](http://ww4.sinaimg.cn/mw1024/6a964b69jw1f97155cjt6j20bu03pglm.jpg)
 
 这说明Windows不能识别键盘，是因为i8042prt不能正确启动这个设备导致。
 
